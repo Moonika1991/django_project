@@ -5,14 +5,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="thin center">Recent Posts</h1>
+                <h1 class="text-center m-3">Recent Posts</h1>
             </div>
 
              {% for post in posts %}
                 <div class="col-md-4">
                     <div class="card mb-3">
                         <div class="card-header" style="background-size: cover; background-image: url('{{ post.image.url }}'); min-height: 100px">
-                            <h5><a href="/post/{{ post.slug }}"  class="text-light" style="decoration: none">{{ post.title }}</a></h5>
+                            <h5><a href="/post/{{ post.slug }}"  class="text-light">{{ post.title }}</a></h5>
                         </div>
                         <p class="small pt-2 pl-2">{{ post.summary }}</p>
                     </div>

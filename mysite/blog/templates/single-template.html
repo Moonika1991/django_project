@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+             <div class="col-md-3">
+                <p>Menu</p>
+                {% for post in posts %}
+                    <div>
+                        <div><a href="/post/{{ post.slug }}" />{{ post.title }}</div>
+                        <div>{{ post.summary }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-9">
+                {% block entry %}{% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
