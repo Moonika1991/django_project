@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
-             <div class="col-md-3 mt-3">
+             <div class="col-md-3 mt-5">
                  {% for post in posts %}
                     <div>
                         <div><a href="/post/{{ post.slug }}">{{ post.title }}</a></div>
@@ -11,7 +11,7 @@
                     </div>
                  {% endfor %}
             </div>
-            <div class="col-md-9 mt-3">
+            <div class="col-md-9 mt-5">
                 {% block entry %}{% endblock %}
             </div>
         </div>
